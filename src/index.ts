@@ -44,6 +44,12 @@ export function capture() {
 	findHomeport(img);
 }
 
+window.addEventListener("load", () => {
+    let message = document.createElement("div");
+    message.textContent = "Hello, Alt1!";
+    document.body.appendChild(message);
+});
+
 function findHomeport(img: a1lib.ImgRef) {
 	var loc = img.findSubimage(imgs.homeport);
 	for (let match of loc) {
